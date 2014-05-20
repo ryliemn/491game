@@ -633,7 +633,7 @@ Monster.prototype.update = function () {
 
 Monster.prototype.draw = function (ctx) {
     if (!this.boundingBox.collide(this.game.tower.boundingBox)) {
-		var enemySpeed = .008;
+		var enemySpeed = .009;
 		if (this.x + this.monsterImgWidth / 2 > 0 ) {
             this.x = this.x - (this.x * enemySpeed);
         } else if (this.x + this.monsterImgWidth / 2 < 0) {
