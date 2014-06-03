@@ -225,15 +225,27 @@ GameEngine.prototype.startInput = function () {
 
 
     this.ctx.canvas.addEventListener("keydown", function (e) {
-    	//console.log(e.keyCode);
+    	console.log(e.keyCode);
     	if (e.keyCode == 77) {
     		if (that.MusicPlayer.BgAudio.paused) {
     			that.MusicPlayer.BgAudio.play();
     		} else {
     			that.MusicPlayer.BgAudio.pause();
     		}
-    	}
-
+    	} else if (e.keyCode == 81) { //upgrade tower range if user hits q (and has 200 gold)
+			console.log("USER HIT Q KEY *****************************************");
+			
+		} else if (e.keyCode == 69) { //upgrade tower attack speed if user hits e (and has 300 gold)
+			console.log("USER HIT E KEY *****************************************");
+			
+		} else if (e.keyCode == 82) { //restore 5 tower health if user hits r (and has 250 gold)
+			console.log("USER HIT R KEY *****************************************");
+			
+		} else if (e.keyCode == 70) { //restore hero movement speed if user hits f (and has 100,000 kill points)
+			console.log("USER HIT F KEY *****************************************");
+			
+		}
+		
         that.map[e.keyCode] = true;
 
     }, false);
